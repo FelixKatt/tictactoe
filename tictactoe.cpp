@@ -43,9 +43,8 @@ void game(){
                 cin >> player1;
                 fields[player1-1] = 'X';
                 board();
-                if(pick)
-                        pickCount++;
-                if(pickCount == 9) {
+                pickCount++;
+                if(pickCount != 9) {
                         break;
                 }
                 cout << "Player2:";
@@ -117,9 +116,8 @@ void game(){
                                 player2Wins = true;
                         }
                 }
-                round++;
         }
-        if(round == 10 && !player1Wins && !player2Wins) {
+        if(pickCount == 9 && !player1Wins && !player2Wins) {
                 cout << "Both players lost" << endl;
         } else if(player1Wins && player2Wins) {
                 cout << "draw" << endl;
