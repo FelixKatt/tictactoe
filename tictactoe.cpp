@@ -37,7 +37,7 @@ void game(){
         bool player1Wins = false;
         bool player2Wins = false;
         int pickCount = 0;
-        while(!player1Wins && !player2Wins &&) {
+        while(!player1Wins && !player2Wins) {
                 int player1, player2;
                 cout << "Player1:";
                 cin >> player1;
@@ -45,6 +45,9 @@ void game(){
                 board();
                 if(pick)
                         pickCount++;
+                if(pickCount == 9) {
+                        break;
+                }
                 cout << "Player2:";
                 cin >> player2;
                 fields[player2-1] = 'O';
